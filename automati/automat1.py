@@ -1,7 +1,11 @@
 import sys
 
 #   (a|b)*abb
-prelazi = {("AC", "a") : "B", ("AC", "b") : "AC", ("B", "a"):"B", ("B", "b") : "D", ("D", "a"):"B", ("D", "b"):"E", ("E", "a"):"B", ("E", "b") : "AC"}
+prelazi = { ("AC", "a") : "B", ("AC", "b") : "AC", 
+            ("B", "a") :"B", ("B", "b") : "D", 
+            ("D", "a") :"B", ("D", "b") : "E", 
+            ("E", "a") : "B", ("E", "b") : "AC"
+        }
 
 pocetno = "AC"
 zavrsna = ["E"]
@@ -28,5 +32,5 @@ while True:
 
 if stanje in zavrsna:
     print("Rec je deo jezika")
-else 
+else:
     print("Rec nije deo jezika")
